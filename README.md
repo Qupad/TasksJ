@@ -1,4 +1,4 @@
 # TasksJ
-This is some sht.
-Java sht.
+This is some sht./n
+Java sht./n
 For Kraev.
