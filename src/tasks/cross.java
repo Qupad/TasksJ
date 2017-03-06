@@ -71,7 +71,7 @@ import java.util.*;
                 Board b = new Board();
                 Scanner sc = new Scanner(System.in);
                 b.printBoard();
-                for (int i = 0; i < 10;i++) {
+                for (; ;) {
 
                     System.out.print("Pls enter X number: ");
                     int a = sc.nextInt();
