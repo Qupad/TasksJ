@@ -24,9 +24,9 @@ import java.util.*;
             }
 
             void printBoard() {
-                    System.out.println(this.board[0][0] + "  " + this.board[0][1] + "  " + this.board[0][2]);
-                    System.out.println(this.board[1][0] + "  " + this.board[1][1] + "  " + this.board[1][2]);
-                    System.out.println(this.board[2][0] + "  " + this.board[2][1] + "  " + this.board[2][2]);
+                    System.out.println( this.board[0][0] + "  " + this.board[0][1] + "  " + this.board[0][2]);
+                    System.out.println( this.board[1][0] + "  " + this.board[1][1] + "  " + this.board[1][2]);
+                    System.out.println( this.board[2][0] + "  " + this.board[2][1] + "  " + this.board[2][2]);
             }
             boolean checkLoser(){
 
@@ -100,10 +100,10 @@ import java.util.*;
                         System.out.println("Fuck u.");
                     }
                         if (b.checkWin()) {
-                            System.out.print("Winner Winner - chicken dinner!");
+                            System.out.print(xxx+" is Winner Winner - chicken dinner!");
                             break; }
                         else if (b.checkLoser()) {
-                            System.out.print("Cucked");
+                            System.out.print("Cucked.");
                             break; }
                 }
             }
