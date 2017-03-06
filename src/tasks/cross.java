@@ -1,7 +1,8 @@
 package tasks;
 
 /**
- * Created by Maniak on 06.03.2017.
+ * Created by Maniak on 06.03.2017.\
+ * PLAY IN SUPER FUN GAME cross and zero !!!!!1!!!!1
  */
 import java.util.*;
 
