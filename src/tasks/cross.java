@@ -31,15 +31,10 @@ import java.util.*;
                     break;
                 }
             }
-
-            boolean checkWin() {
-    /*
-      88 is X
-      79 is O
-
-    */
-
-                {
+            boolean checkWin()
+//88 is X
+//79 is O
+             {
         if (this.getCellValue(0,0) == this.getCellValue(1,0) && this.getCellValue(1,0) == this.getCellValue(2,0))
             return true;
             else if (this.getCellValue(0, 1) == this.getCellValue(1, 1) && this.getCellValue(1, 1) == this.getCellValue(2, 1))
@@ -59,78 +54,51 @@ import java.util.*;
             else
                 return false;
         }
-    /*
-      return true if win
-      else return false
-    */
-            }
+    //return true if win
+    //else return false
         }
-
         class cross {
             public static void main(String[] args) {
                 Board b = new Board();
+                char xxx = 'O';
                 Scanner sc = new Scanner(System.in);
                 b.printBoard();
                 for (; ;) {
-
-                    System.out.print("Pls enter X number: ");
+                    if (xxx == 'O')
+                    {
+                        xxx = 'X';
+                    }
+                    else
+                    {
+                        xxx = 'O';
+                    }
+                    System.out.print("Pls enter " + xxx + " number: ");
                     int a = sc.nextInt();
-                    if (a == 1 && b.getCellValue(0,0)< 10) {
-                    b.setCellValue(0, 0, 88); b.printBoard(); }
-                      else if (a == 2 && b.getCellValue(0,1)< 10) {
-                        b.setCellValue(0, 1, 88); b.printBoard(); }
-                      else if (a == 3 && b.getCellValue(0,2)< 10){
-                            b.setCellValue(0, 2, 88); b.printBoard();}
-                        else if (a == 4 && b.getCellValue(1,0)< 10){
-                            b.setCellValue(1, 0, 88); b.printBoard();}
-                        else if (a == 5 && b.getCellValue(1,1)< 10){
-                            b.setCellValue(1, 1, 88); b.printBoard();}
-                        else if (a == 6 && b.getCellValue(1,2)< 10){
-                            b.setCellValue(1, 2, 88); b.printBoard();}
-                        else if (a == 7 && b.getCellValue(2,0)< 10){
-                            b.setCellValue(2, 0, 88); b.printBoard();}
-                        else if (a == 8 && b.getCellValue(2,1)< 10){
-                            b.setCellValue(2, 1, 88); b.printBoard();}
-                        else if (a == 9 && b.getCellValue(2,2)< 10){
-                            b.setCellValue(2, 2, 88); b.printBoard();
+                    if (a == 1) {
+                        b.setCellValue(0, 0, xxx); b.printBoard();}
+                    else if (a == 2) {
+                        b.setCellValue(0, 1, xxx); b.printBoard();}
+                    else if (a == 3){
+                        b.setCellValue(0, 2, xxx); b.printBoard();}
+                    else if (a == 4){
+                        b.setCellValue(1, 0, xxx); b.printBoard();}
+                    else if (a == 5){
+                        b.setCellValue(1, 1, xxx); b.printBoard();}
+                    else if (a == 6){
+                        b.setCellValue(1, 2, xxx); b.printBoard();}
+                    else if (a == 7){
+                        b.setCellValue(2, 0, xxx); b.printBoard();}
+                    else if (a == 8){
+                        b.setCellValue(2, 1, xxx); b.printBoard();}
+                    else if (a == 9){
+                        b.setCellValue(2, 2, xxx); b.printBoard();
                     } else {
                         System.out.println("Fuck u.");
-                        continue;
                     }
                         if (b.checkWin()) {
                         System.out.print("Winner Winner - chicken dinner!");
                         break;
                     }
-                     System.out.print("Pls enter O number: ");
-                    a = sc.nextInt();
-                     if (a == 1 && b.getCellValue(0,0)< 10) {
-                        b.setCellValue(0, 0, 79); b.printBoard();}
-                    else if (a == 2 && b.getCellValue(0,1)< 10) {
-                            b.setCellValue(0, 1, 79); b.printBoard();}
-                            else if (a == 3 && b.getCellValue(0,2)< 10){
-                                b.setCellValue(0, 2, 79); b.printBoard(); }
-                            else if (a == 4 && b.getCellValue(1,0)< 10) {
-                                b.setCellValue(1, 0, 79); b.printBoard();}
-                            else if (a == 5 && b.getCellValue(1,1)< 10){
-                                b.setCellValue(1, 1, 79); b.printBoard();}
-                            else if (a == 6 && b.getCellValue(1,2)< 10) {
-                                b.setCellValue(1, 2, 79); b.printBoard();}
-                            else if (a == 7 && b.getCellValue(2,0)< 10) {
-                                b.setCellValue(2, 0, 79); b.printBoard();}
-                            else if (a == 8 && b.getCellValue(2,1)< 10){
-                                b.setCellValue(2, 1, 79); b.printBoard();}
-                            else if (a == 9 && b.getCellValue(2,2)< 10){
-                                b.setCellValue(2, 2, 79); b.printBoard();
-                        } else {
-                        System.out.println("Fuck u.");
-                    }
-                            if (b.checkWin()) {
-                            System.out.print("Winner Winner - chicken dinner!");
-                            break;
-                    }
-
-                    }
-
-                    }
                 }
-
+            }
+        }
