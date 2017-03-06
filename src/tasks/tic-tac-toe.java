@@ -7,12 +7,12 @@ package tasks;
 import java.util.*;
 
         class Board {
-            private int[][] board;
+            private char[][] board;
             public Board() {
-                board = new int[][]{
-                        {1, 2, 3},
-                        {4, 5, 6},
-                        {7, 8, 9},
+                board = new char[][]{
+                        {49, 50, 51},
+                        {52, 53, 54},
+                        {55, 56, 57},
                 };
             }
             int getCellValue(int x_index, int y_index) {
@@ -20,17 +20,17 @@ import java.util.*;
             }
 
             void setCellValue(int x_index, int y_index, int value) {
-                this.board[x_index][y_index] = value;
+                this.board[x_index][y_index] = (char) value;
             }
 
             void printBoard() {
-                    System.out.println( this.board[0][0] + "  " + this.board[0][1] + "  " + this.board[0][2]);
-                    System.out.println( this.board[1][0] + "  " + this.board[1][1] + "  " + this.board[1][2]);
-                    System.out.println( this.board[2][0] + "  " + this.board[2][1] + "  " + this.board[2][2]);
+                    System.out.println(this.board[0][0] + "  " + this.board[0][1] + "  " + this.board[0][2]);
+                    System.out.println(this.board[1][0] + "  " + this.board[1][1] + "  " + this.board[1][2]);
+                    System.out.println(this.board[2][0] + "  " + this.board[2][1] + "  " + this.board[2][2]);
             }
             boolean checkLoser(){
 
-            if (this.getCellValue(0, 0) > 10 && this.getCellValue(0, 1) > 10 && this.getCellValue(0, 2) > 10 && this.getCellValue(1, 0) > 10 && this.getCellValue(1, 1) > 10 && this.getCellValue(1, 2) > 10 && this.getCellValue(2, 0) > 10 && this.getCellValue(2, 1) > 10 && this.getCellValue(2, 2) > 10)
+            if (this.getCellValue(0, 0) > 58 && this.getCellValue(0, 1) > 58 && this.getCellValue(0, 2) > 58 && this.getCellValue(1, 0) > 58 && this.getCellValue(1, 1) > 58 && this.getCellValue(1, 2) > 58 && this.getCellValue(2, 0) > 58 && this.getCellValue(2, 1) > 58 && this.getCellValue(2, 2) > 58)
                 return true;
             else
                 return false;
@@ -78,23 +78,23 @@ import java.util.*;
                     }
                     System.out.print("Pls enter " + xxx + " number: ");
                     int a = sc.nextInt();
-                    if (a == 1 && b.getCellValue(0,0) < 10) {
+                    if (a == 1 && b.getCellValue(0,0) < 58) {
                         b.setCellValue(0, 0, xxx); b.printBoard();}
-                    else if (a == 2 && b.getCellValue(0,1) < 10) {
+                    else if (a == 2 && b.getCellValue(0,1) < 58) {
                         b.setCellValue(0, 1, xxx); b.printBoard();}
-                    else if (a == 3 && b.getCellValue(0,2) < 10){
+                    else if (a == 3 && b.getCellValue(0,2) < 58){
                         b.setCellValue(0, 2, xxx); b.printBoard();}
-                    else if (a == 4 && b.getCellValue(1,0) < 10){
+                    else if (a == 4 && b.getCellValue(1,0) < 58){
                         b.setCellValue(1, 0, xxx); b.printBoard();}
-                    else if (a == 5 && b.getCellValue(1,1) < 10){
+                    else if (a == 5 && b.getCellValue(1,1) < 58){
                         b.setCellValue(1, 1, xxx); b.printBoard();}
-                    else if (a == 6 && b.getCellValue(1,2) < 10){
+                    else if (a == 6 && b.getCellValue(1,2) < 58){
                         b.setCellValue(1, 2, xxx); b.printBoard();}
-                    else if (a == 7 && b.getCellValue(2,0) < 10){
+                    else if (a == 7 && b.getCellValue(2,0) < 58){
                         b.setCellValue(2, 0, xxx); b.printBoard();}
-                    else if (a == 8 && b.getCellValue(2,1) < 10){
+                    else if (a == 8 && b.getCellValue(2,1) < 58){
                         b.setCellValue(2, 1, xxx); b.printBoard();}
-                    else if (a == 9 && b.getCellValue(2,2) < 10){
+                    else if (a == 9 && b.getCellValue(2,2) < 58){
                         b.setCellValue(2, 2, xxx); b.printBoard();
                     } else {
                         System.out.println("Fuck u.");
