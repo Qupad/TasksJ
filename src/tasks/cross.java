@@ -31,6 +31,13 @@ import java.util.*;
                     break;
                 }
             }
+            boolean checkLoser(){
+
+            if (this.getCellValue(0, 0) > 10 && this.getCellValue(0, 1) > 10 && this.getCellValue(0, 2) > 10 && this.getCellValue(1, 0) > 10 && this.getCellValue(1, 1) > 10 && this.getCellValue(1, 2) > 10 && this.getCellValue(2, 0) > 10 && this.getCellValue(2, 1) > 10 && this.getCellValue(2, 2) > 10)
+                return true;
+            else
+                return false;
+            }
             boolean checkWin()
 //88 is X
 //79 is O
@@ -96,9 +103,11 @@ import java.util.*;
                         System.out.println("Fuck u.");
                     }
                         if (b.checkWin()) {
-                        System.out.print("Winner Winner - chicken dinner!");
-                        break;
-                    }
+                            System.out.print("Winner Winner - chicken dinner!");
+                            break; }
+                        else if (b.checkLoser()) {
+                            System.out.print("Cucked");
+                            break; }
                 }
             }
         }
