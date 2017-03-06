@@ -74,23 +74,23 @@ import java.util.*;
                     }
                     System.out.print("Pls enter " + xxx + " number: ");
                     int a = sc.nextInt();
-                    if (a == 1) {
+                    if (a == 1 && b.getCellValue(0,0) < 10) {
                         b.setCellValue(0, 0, xxx); b.printBoard();}
-                    else if (a == 2) {
+                    else if (a == 2 && b.getCellValue(0,1) < 10) {
                         b.setCellValue(0, 1, xxx); b.printBoard();}
-                    else if (a == 3){
+                    else if (a == 3 && b.getCellValue(0,2) < 10){
                         b.setCellValue(0, 2, xxx); b.printBoard();}
-                    else if (a == 4){
+                    else if (a == 4 && b.getCellValue(1,0) < 10){
                         b.setCellValue(1, 0, xxx); b.printBoard();}
-                    else if (a == 5){
+                    else if (a == 5 && b.getCellValue(1,1) < 10){
                         b.setCellValue(1, 1, xxx); b.printBoard();}
-                    else if (a == 6){
+                    else if (a == 6 && b.getCellValue(1,2) < 10){
                         b.setCellValue(1, 2, xxx); b.printBoard();}
-                    else if (a == 7){
+                    else if (a == 7 && b.getCellValue(2,0) < 10){
                         b.setCellValue(2, 0, xxx); b.printBoard();}
-                    else if (a == 8){
+                    else if (a == 8 && b.getCellValue(2,1) < 10){
                         b.setCellValue(2, 1, xxx); b.printBoard();}
-                    else if (a == 9){
+                    else if (a == 9 && b.getCellValue(2,2) < 10){
                         b.setCellValue(2, 2, xxx); b.printBoard();
                     } else {
                         System.out.println("Fuck u.");
