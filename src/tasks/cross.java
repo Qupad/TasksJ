@@ -76,23 +76,23 @@ import java.util.*;
                     System.out.print("Pls enter X number: ");
                     int a = sc.nextInt();
                     if (a == 1 && b.getCellValue(0,0)< 10) {
-                    b.setCellValue(0, 0, 88); b.printBoard(); b.checkWin();}
+                    b.setCellValue(0, 0, 88); b.printBoard(); }
                       else if (a == 2 && b.getCellValue(0,1)< 10) {
-                        b.setCellValue(0, 1, 88); b.printBoard(); b.checkWin();}
+                        b.setCellValue(0, 1, 88); b.printBoard(); }
                       else if (a == 3 && b.getCellValue(0,2)< 10){
-                            b.setCellValue(0, 2, 88); b.printBoard();b.checkWin();}
+                            b.setCellValue(0, 2, 88); b.printBoard();}
                         else if (a == 4 && b.getCellValue(1,0)< 10){
-                            b.setCellValue(1, 0, 88); b.printBoard();b.checkWin();}
+                            b.setCellValue(1, 0, 88); b.printBoard();}
                         else if (a == 5 && b.getCellValue(1,1)< 10){
-                            b.setCellValue(1, 1, 88); b.printBoard();b.checkWin();}
+                            b.setCellValue(1, 1, 88); b.printBoard();}
                         else if (a == 6 && b.getCellValue(1,2)< 10){
-                            b.setCellValue(1, 2, 88); b.printBoard();b.checkWin();}
+                            b.setCellValue(1, 2, 88); b.printBoard();}
                         else if (a == 7 && b.getCellValue(2,0)< 10){
-                            b.setCellValue(2, 0, 88); b.printBoard();b.checkWin();}
+                            b.setCellValue(2, 0, 88); b.printBoard();}
                         else if (a == 8 && b.getCellValue(2,1)< 10){
-                            b.setCellValue(2, 1, 88); b.printBoard();b.checkWin();}
+                            b.setCellValue(2, 1, 88); b.printBoard();}
                         else if (a == 9 && b.getCellValue(2,2)< 10){
-                            b.setCellValue(2, 2, 88); b.printBoard(); b.checkWin();
+                            b.setCellValue(2, 2, 88); b.printBoard();
                     } else {
                         System.out.println("Fuck u.");
                         continue;
@@ -104,23 +104,23 @@ import java.util.*;
                      System.out.print("Pls enter O number: ");
                     a = sc.nextInt();
                      if (a == 1 && b.getCellValue(0,0)< 10) {
-                        b.setCellValue(0, 0, 79); b.printBoard(); b.checkWin();}
+                        b.setCellValue(0, 0, 79); b.printBoard();}
                     else if (a == 2 && b.getCellValue(0,1)< 10) {
-                            b.setCellValue(0, 1, 79); b.printBoard(); b.checkWin();}
+                            b.setCellValue(0, 1, 79); b.printBoard();}
                             else if (a == 3 && b.getCellValue(0,2)< 10){
-                                b.setCellValue(0, 2, 79); b.printBoard(); b.checkWin();}
+                                b.setCellValue(0, 2, 79); b.printBoard(); }
                             else if (a == 4 && b.getCellValue(1,0)< 10) {
-                                b.setCellValue(1, 0, 79); b.printBoard(); b.checkWin();}
+                                b.setCellValue(1, 0, 79); b.printBoard();}
                             else if (a == 5 && b.getCellValue(1,1)< 10){
-                                b.setCellValue(1, 1, 79); b.printBoard(); b.checkWin();}
+                                b.setCellValue(1, 1, 79); b.printBoard();}
                             else if (a == 6 && b.getCellValue(1,2)< 10) {
-                                b.setCellValue(1, 2, 79); b.printBoard(); b.checkWin();}
+                                b.setCellValue(1, 2, 79); b.printBoard();}
                             else if (a == 7 && b.getCellValue(2,0)< 10) {
-                                b.setCellValue(2, 0, 79); b.printBoard(); b.checkWin();}
+                                b.setCellValue(2, 0, 79); b.printBoard();}
                             else if (a == 8 && b.getCellValue(2,1)< 10){
-                                b.setCellValue(2, 1, 79); b.printBoard(); b.checkWin();}
+                                b.setCellValue(2, 1, 79); b.printBoard();}
                             else if (a == 9 && b.getCellValue(2,2)< 10){
-                                b.setCellValue(2, 2, 79); b.printBoard();b.checkWin();
+                                b.setCellValue(2, 2, 79); b.printBoard();
                         } else {
                         System.out.println("Fuck u.");
                     }
