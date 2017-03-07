@@ -15,6 +15,7 @@ import java.util.*;
                         {55, 56, 57},
                 };
             }
+
             int getCellValue(int x_index, int y_index) {
                 return this.board[x_index][y_index];
             }
@@ -24,9 +25,12 @@ import java.util.*;
             }
 
             void printBoard() {
-                    System.out.println(this.board[0][0] + "  " + this.board[0][1] + "  " + this.board[0][2]);
-                    System.out.println(this.board[1][0] + "  " + this.board[1][1] + "  " + this.board[1][2]);
-                    System.out.println(this.board[2][0] + "  " + this.board[2][1] + "  " + this.board[2][2]);
+                for (int i = 0; i < board.length;i++ ) {
+                    for (int j = 0; j < board.length; j++) {
+                        System.out.print(this.board[i][j] + "  ");
+                    }
+                    System.out.println();
+                }
             }
 
             boolean resetBoard() {
@@ -40,11 +44,13 @@ import java.util.*;
                     this.setCellValue(2, 0, 55);
                     this.setCellValue(2, 1, 56);
                     this.setCellValue(2, 2, 57);
+                    this.printBoard();
                     return true;
                 }
                 else
                     return false;
             }
+
             boolean checkLoser(){
 
             if (this.getCellValue(0, 0) > 58 && this.getCellValue(0, 1) > 58 && this.getCellValue(0, 2) > 58 && this.getCellValue(1, 0) > 58 && this.getCellValue(1, 1) > 58 && this.getCellValue(1, 2) > 58 && this.getCellValue(2, 0) > 58 && this.getCellValue(2, 1) > 58 && this.getCellValue(2, 2) > 58)
@@ -75,8 +81,8 @@ import java.util.*;
             else
                 return false;
         }
-    //return true if win
-    //else return false
+//return true if win
+//else return false
         }
         class cross {
             public static void main(String[] args) {
@@ -117,11 +123,11 @@ import java.util.*;
                         System.out.println("Fuck u.");
                     }
                         if (b.checkWin()) {
-                            System.out.println(xxx+" is Winner Winner - chicken dinner!");
+                            System.out.println("\t\t\t\t"+xxx+" is Winner Winner - chicken dinner!");
                             b.resetBoard();
                             continue;}
                         else if (b.checkLoser()) {
-                            System.out.println("Cucked.");
+                            System.out.println("\t\t\t\tCucked.");
                             b.resetBoard();
                             continue; }
                 }
