@@ -28,6 +28,23 @@ import java.util.*;
                     System.out.println(this.board[1][0] + "  " + this.board[1][1] + "  " + this.board[1][2]);
                     System.out.println(this.board[2][0] + "  " + this.board[2][1] + "  " + this.board[2][2]);
             }
+
+            boolean resetBoard() {
+                if (this.checkWin() || this.checkLoser()) {
+                    this.setCellValue(0, 0, 49);
+                    this.setCellValue(0, 1, 50);
+                    this.setCellValue(0, 2, 51);
+                    this.setCellValue(1, 0, 52);
+                    this.setCellValue(1, 1, 53);
+                    this.setCellValue(1, 2, 54);
+                    this.setCellValue(2, 0, 55);
+                    this.setCellValue(2, 1, 56);
+                    this.setCellValue(2, 2, 57);
+                    return true;
+                }
+                else
+                    return false;
+            }
             boolean checkLoser(){
 
             if (this.getCellValue(0, 0) > 58 && this.getCellValue(0, 1) > 58 && this.getCellValue(0, 2) > 58 && this.getCellValue(1, 0) > 58 && this.getCellValue(1, 1) > 58 && this.getCellValue(1, 2) > 58 && this.getCellValue(2, 0) > 58 && this.getCellValue(2, 1) > 58 && this.getCellValue(2, 2) > 58)
@@ -100,11 +117,13 @@ import java.util.*;
                         System.out.println("Fuck u.");
                     }
                         if (b.checkWin()) {
-                            System.out.print(xxx+" is Winner Winner - chicken dinner!");
-                            break; }
+                            System.out.println(xxx+" is Winner Winner - chicken dinner!");
+                            b.resetBoard();
+                            continue;}
                         else if (b.checkLoser()) {
-                            System.out.print("Cucked.");
-                            break; }
+                            System.out.println("Cucked.");
+                            b.resetBoard();
+                            continue; }
                 }
             }
         }
