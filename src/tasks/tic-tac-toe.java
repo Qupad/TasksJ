@@ -34,17 +34,17 @@ import java.util.*;
             }
 
             boolean resetBoard() {
-                if (this.checkWin() || this.checkLoser()) {
-                    this.setCellValue(0, 0, 49);
-                    this.setCellValue(0, 1, 50);
-                    this.setCellValue(0, 2, 51);
-                    this.setCellValue(1, 0, 52);
-                    this.setCellValue(1, 1, 53);
-                    this.setCellValue(1, 2, 54);
-                    this.setCellValue(2, 0, 55);
-                    this.setCellValue(2, 1, 56);
-                    this.setCellValue(2, 2, 57);
-                    this.printBoard();
+                if (checkWin() || checkLoser()) {
+                    setCellValue(0, 0, 49);
+                    setCellValue(0, 1, 50);
+                    setCellValue(0, 2, 51);
+                    setCellValue(1, 0, 52);
+                    setCellValue(1, 1, 53);
+                    setCellValue(1, 2, 54);
+                    setCellValue(2, 0, 55);
+                    setCellValue(2, 1, 56);
+                    setCellValue(2, 2, 57);
+                    printBoard();
                     return true;
                 }
                 else
