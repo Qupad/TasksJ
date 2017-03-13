@@ -7,6 +7,7 @@ package tasks;
 import java.util.*;
 
         class Board {
+            Judge law = new Judge();
             private char[][] board;
             public Board() {
                 board = new char[][]{
@@ -34,7 +35,7 @@ import java.util.*;
             }
 
             boolean resetBoard() {
-                if (checkWin() || checkLoser()) {
+                if (law.checkWin() || law.checkLoser()) {
                     setCellValue(0, 0, 49);
                     setCellValue(0, 1, 50);
                     setCellValue(0, 2, 51);
@@ -50,39 +51,6 @@ import java.util.*;
                 else
                     return false;
             }
-
-            boolean checkLoser(){
-
-            if (this.getCellValue(0, 0) > 58 && this.getCellValue(0, 1) > 58 && this.getCellValue(0, 2) > 58 && this.getCellValue(1, 0) > 58 && this.getCellValue(1, 1) > 58 && this.getCellValue(1, 2) > 58 && this.getCellValue(2, 0) > 58 && this.getCellValue(2, 1) > 58 && this.getCellValue(2, 2) > 58)
-                return true;
-            else
-                return false;
-            }
-            boolean checkWin()
-//88 is X
-//79 is O
-             {
-        if (this.getCellValue(0,0) == this.getCellValue(1,0) && this.getCellValue(1,0) == this.getCellValue(2,0))
-            return true;
-            else if (this.getCellValue(0, 1) == this.getCellValue(1, 1) && this.getCellValue(1, 1) == this.getCellValue(2, 1))
-                return true;
-            else if (this.getCellValue(0, 2) == this.getCellValue(1, 2) && this.getCellValue(1, 2) == this.getCellValue(2, 2))
-                return true;
-            else if (this.getCellValue(0, 0) == this.getCellValue(0, 1) && this.getCellValue(0, 1) == this.getCellValue(0, 2))
-                return true;
-            else if (this.getCellValue(1, 0) == this.getCellValue(1, 1) && this.getCellValue(1, 1) == this.getCellValue(1, 2))
-                return true;
-            else if (this.getCellValue(2, 0) == this.getCellValue(2, 1) && this.getCellValue(2, 1) == this.getCellValue(2, 2))
-                return true;
-            else if (this.getCellValue(0, 0) == this.getCellValue(1, 1) && this.getCellValue(1, 1) == this.getCellValue(2, 2))
-                return true;
-            else if (this.getCellValue(2, 0) == this.getCellValue(1, 1) && this.getCellValue(1, 1) == this.getCellValue(0, 2))
-                return true;
-            else
-                return false;
-        }
-//return true if win
-//else return false
         }
         class cross {
             public static void main(String[] args) {
@@ -122,14 +90,49 @@ import java.util.*;
                     } else {
                         System.out.println("Fuck u.");
                     }
-                        if (b.checkWin()) {
+                        if (b.law.checkWin()) {
                             System.out.println("\t\t\t\t"+xxx+" is Winner Winner - chicken dinner!");
                             b.resetBoard();
-                            continue;}
-                        else if (b.checkLoser()) {
+                            }
+                        else if (b.law.checkLoser()) {
                             System.out.println("\t\t\t\tCucked.");
                             b.resetBoard();
-                            continue; }
+                            }
                 }
+            }
+        }
+        class Judge {
+            Board a = new Board();
+            
+            boolean checkLoser(){
+
+
+                if (a.getCellValue(0, 0) > 58 && a.getCellValue(0, 1) > 58 && a.getCellValue(0, 2) > 58 && a.getCellValue(1, 0) > 58 && a.getCellValue(1, 1) > 58 && a.getCellValue(1, 2) > 58 && a.getCellValue(2, 0) > 58 && a.getCellValue(2, 1) > 58 && a.getCellValue(2, 2) > 58)
+                    return true;
+                else
+                    return false;
+            }
+            boolean checkWin()
+//88 is X
+//79 is O
+            {
+                if (a.getCellValue(0,0) == a.getCellValue(1,0) && a.getCellValue(1,0) == a.getCellValue(2,0))
+                    return true;
+                else if (a.getCellValue(0, 1) == a.getCellValue(1, 1) && a.getCellValue(1, 1) == a.getCellValue(2, 1))
+                    return true;
+                else if (a.getCellValue(0, 2) == a.getCellValue(1, 2) && a.getCellValue(1, 2) == a.getCellValue(2, 2))
+                    return true;
+                else if (a.getCellValue(0, 0) == a.getCellValue(0, 1) && a.getCellValue(0, 1) == a.getCellValue(0, 2))
+                    return true;
+                else if (a.getCellValue(1, 0) == a.getCellValue(1, 1) && a.getCellValue(1, 1) == a.getCellValue(1, 2))
+                    return true;
+                else if (a.getCellValue(2, 0) == a.getCellValue(2, 1) && a.getCellValue(2, 1) == a.getCellValue(2, 2))
+                    return true;
+                else if (a.getCellValue(0, 0) == a.getCellValue(1, 1) && a.getCellValue(1, 1) == a.getCellValue(2, 2))
+                    return true;
+                else if (a.getCellValue(2, 0) == a.getCellValue(1, 1) && a.getCellValue(1, 1) == a.getCellValue(0, 2))
+                    return true;
+                else
+                    return false;
             }
         }
