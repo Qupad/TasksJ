@@ -7,7 +7,6 @@ package tasks;
 import java.util.*;
 
         class Board {
-            Judge law = new Judge();
             private char[][] board;
             public Board() {
                 board = new char[][]{
@@ -34,27 +33,11 @@ import java.util.*;
                 }
             }
 
-            boolean resetBoard() {
-                if (law.checkWin() || law.checkLoser()) {
-                    setCellValue(0, 0, 49);
-                    setCellValue(0, 1, 50);
-                    setCellValue(0, 2, 51);
-                    setCellValue(1, 0, 52);
-                    setCellValue(1, 1, 53);
-                    setCellValue(1, 2, 54);
-                    setCellValue(2, 0, 55);
-                    setCellValue(2, 1, 56);
-                    setCellValue(2, 2, 57);
-                    printBoard();
-                    return true;
-                }
-                else
-                    return false;
-            }
         }
         class cross {
             public static void main(String[] args) {
                 Board b = new Board();
+                Judge law = new Judge();
                 char xxx = 'O';
                 Scanner sc = new Scanner(System.in);
                 b.printBoard();
@@ -90,49 +73,67 @@ import java.util.*;
                     } else {
                         System.out.println("Fuck u.");
                     }
-                        if (b.law.checkWin()) {
+                        if (Judge.checkWin(board)) {
                             System.out.println("\t\t\t\t"+xxx+" is Winner Winner - chicken dinner!");
-                            b.resetBoard();
+                            resetBoard();
                             }
-                        else if (b.law.checkLoser()) {
+                        else if (law.checkLoser()) {
                             System.out.println("\t\t\t\tCucked.");
-                            b.resetBoard();
+                            resetBoard();
                             }
                 }
-            }
-        }
-        class Judge {
-            Board a = new Board();
-            
-            boolean checkLoser(){
 
+                class Judge {
 
-                if (a.getCellValue(0, 0) > 58 && a.getCellValue(0, 1) > 58 && a.getCellValue(0, 2) > 58 && a.getCellValue(1, 0) > 58 && a.getCellValue(1, 1) > 58 && a.getCellValue(1, 2) > 58 && a.getCellValue(2, 0) > 58 && a.getCellValue(2, 1) > 58 && a.getCellValue(2, 2) > 58)
-                    return true;
-                else
-                    return false;
-            }
-            boolean checkWin()
+                    boolean checkLoser(){
+
+                        if (bo.getCellValue(0, 0) > 58 && bo.getCellValue(0, 1) > 58 && bo.getCellValue(0, 2) > 58 && bo.getCellValue(1, 0) > 58 && bo.getCellValue(1, 1) > 58 && bo.getCellValue(1, 2) > 58 && bo.getCellValue(2, 0) > 58 && bo.getCellValue(2, 1) > 58 && bo.getCellValue(2, 2) > 58)
+                            return true;
+                        else
+                            return false;
+                    }
+                    boolean checkWin(Board board)
 //88 is X
 //79 is O
-            {
-                if (a.getCellValue(0,0) == a.getCellValue(1,0) && a.getCellValue(1,0) == a.getCellValue(2,0))
-                    return true;
-                else if (a.getCellValue(0, 1) == a.getCellValue(1, 1) && a.getCellValue(1, 1) == a.getCellValue(2, 1))
-                    return true;
-                else if (a.getCellValue(0, 2) == a.getCellValue(1, 2) && a.getCellValue(1, 2) == a.getCellValue(2, 2))
-                    return true;
-                else if (a.getCellValue(0, 0) == a.getCellValue(0, 1) && a.getCellValue(0, 1) == a.getCellValue(0, 2))
-                    return true;
-                else if (a.getCellValue(1, 0) == a.getCellValue(1, 1) && a.getCellValue(1, 1) == a.getCellValue(1, 2))
-                    return true;
-                else if (a.getCellValue(2, 0) == a.getCellValue(2, 1) && a.getCellValue(2, 1) == a.getCellValue(2, 2))
-                    return true;
-                else if (a.getCellValue(0, 0) == a.getCellValue(1, 1) && a.getCellValue(1, 1) == a.getCellValue(2, 2))
-                    return true;
-                else if (a.getCellValue(2, 0) == a.getCellValue(1, 1) && a.getCellValue(1, 1) == a.getCellValue(0, 2))
-                    return true;
-                else
-                    return false;
+                    {
+                        if (board.getCellValue(0,0) == board.getCellValue(1,0) && board.getCellValue(1,0) == board.getCellValue(2,0))
+                            return true;
+                        else if (board.getCellValue(0, 1) == board.getCellValue(1, 1) && board.getCellValue(1, 1) == board.getCellValue(2, 1))
+                            return true;
+                        else if (board.getCellValue(0, 2) == board.getCellValue(1, 2) && board.getCellValue(1, 2) == board.getCellValue(2, 2))
+                            return true;
+                        else if (board.getCellValue(0, 0) == board.getCellValue(0, 1) && board.getCellValue(0, 1) == board.getCellValue(0, 2))
+                            return true;
+                        else if (board.getCellValue(1, 0) == board.getCellValue(1, 1) && board.getCellValue(1, 1) == board.getCellValue(1, 2))
+                            return true;
+                        else if (board.getCellValue(2, 0) == board.getCellValue(2, 1) && board.getCellValue(2, 1) == board.getCellValue(2, 2))
+                            return true;
+                        else if (board.getCellValue(0, 0) == board.getCellValue(1, 1) && board.getCellValue(1, 1) == board.getCellValue(2, 2))
+                            return true;
+                        else if (board.getCellValue(2, 0) == board.getCellValue(1, 1) && board.getCellValue(1, 1) == board.getCellValue(0, 2))
+                            return true;
+                        else
+                            return false;
+                    }
+                    boolean resetBoard() {
+                        if (checkWin() || checkLoser()) {
+                            bo.setCellValue(0, 0, 49);
+                            bo.setCellValue(0, 1, 50);
+                            bo.setCellValue(0, 2, 51);
+                            bo.setCellValue(1, 0, 52);
+                            bo.setCellValue(1, 1, 53);
+                            bo.setCellValue(1, 2, 54);
+                            bo.setCellValue(2, 0, 55);
+                            bo.setCellValue(2, 1, 56);
+                            bo.setCellValue(2, 2, 57);
+                            bo.printBoard();
+                            return true;
+                        }
+                        else
+                            return false;
+                    }
+
+                }
+
             }
         }
