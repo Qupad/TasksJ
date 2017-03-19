@@ -16,8 +16,9 @@ public class Cipher {
         char[] cipher = new char[s1.length()];
         cipher = s1.toCharArray();
         for (int i=0;i < s1.length();i++) {
+            if (cipher[i] == 32)
+                continue;
            cipher[i] = (char) (cipher[i] + 1);
-            System.out.println(cipher[i]);
         }
         return String.valueOf(cipher);
     }
