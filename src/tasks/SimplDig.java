@@ -13,8 +13,15 @@ public class SimplDig {
         int middle = first;
         boolean absent = true;
         int j = 0;
-        for(;;){
+        for (; ; ) {
+            boolean print = true;
             middle++;
+            for (int q = 2; q < middle; q++) {
+                if (middle % q == 0) {
+                    print = false;
+                    break;
+                }
+            }
             if(middle == second) {
                 if(absent) {
                     System.out.println("Absent");
@@ -23,13 +30,13 @@ public class SimplDig {
                 System.out.println(second);
                 break;
             }
-            if(middle%2 != 0&&middle%3 != 0&&middle%4 != 0&&middle%5 != 0&&middle%6 != 0&&middle%7 != 0&&middle%8 != 0&&middle%9 != 0||middle == 2 || middle == 3|| middle == 5|| middle == 7){
-                while (j == 0) {
+            if (print) {
+                absent = false;
+                while(j == 0) {
                     System.out.println(first);
                     j++;
                 }
                 System.out.println(middle);
-                absent = false;
             }
         }
     }
